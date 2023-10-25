@@ -27,10 +27,10 @@ public class BackgroundBehaviour : MonoBehaviour
 		//Debug.Log("_position.y" + _position.y);
 
 		// Если дорога вышла за пределы экрана, переместите ее обратно в начальную позицию
-		if (_position.y <= -4000f) // Здесь -10.0f - это примерное расстояние, на которое дорога должна перемещаться
+		if (_position.y <= -2050f) // Здесь -10.0f - это примерное расстояние, на которое дорога должна перемещаться
 		{
 			// Переместите контейнер в начальную позицию
-			RectTransform.anchoredPosition = new Vector3( _position.x, 4000f, _position.z);
+			RectTransform.anchoredPosition = new Vector3( _position.x, 2047f, _position.z);
 		}
 	}
 }
