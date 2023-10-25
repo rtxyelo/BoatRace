@@ -24,7 +24,7 @@ public class BackgroundBehaviour : MonoBehaviour
 		// Двигаем контейнер влево (или в другом направлении) с постоянной скоростью
 		transform.Translate(Vector3.down * Speed * Time.deltaTime);
 
-		Debug.Log("_position.y" + _position.y);
+		//Debug.Log("_position.y" + _position.y);
 
 		// Если дорога вышла за пределы экрана, переместите ее обратно в начальную позицию
 		if (_position.y <= -4000f) // Здесь -10.0f - это примерное расстояние, на которое дорога должна перемещаться

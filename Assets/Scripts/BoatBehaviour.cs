@@ -11,7 +11,17 @@ public class BoatBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        boat = gameObject;
+
+		rb = GetComponent<Rigidbody2D>();
+        if (!rb)
+        {
+            Rigidbody2D _rb = boat.AddComponent<Rigidbody2D>();
+            rb = _rb;
+        }
+        rb.gravityScale = 0;
+        rb.angularDrag = 0;
+        rb.drag = 4;
     }
 
     // Update is called once per frame
