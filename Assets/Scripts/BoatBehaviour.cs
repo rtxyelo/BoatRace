@@ -5,13 +5,20 @@ using UnityEngine;
 public class BoatBehaviour : MonoBehaviour
 {
     public GameObject boat;
-
+    public GameObject finishLine;
+    
+    private Animator anim;
     private Rigidbody2D rb;
+    private Vector3 startPos;
 
     // Start is called before the first frame update
     void Start()
     {
-        boat = gameObject;
+        finishLine = GameObject.Find("FinishLine");
+		anim = GetComponent<Animator>();
+		boat = gameObject;
+
+		startPos = boat.transform.position;
 
 		rb = GetComponent<Rigidbody2D>();
         if (!rb)
@@ -29,8 +36,13 @@ public class BoatBehaviour : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            rb.AddForce(new Vector2(0, 40));
+            anim.Play("EasyBoat");
+			rb.AddForce(new Vector2(0, 40));
         }
+        if(boat.transform.position.y > finishLine.transform.position.y)
+        {
+            boat.transform.position = startPos;
+		}
         /*
         if(boat.transform.position.y < 0)
         {
