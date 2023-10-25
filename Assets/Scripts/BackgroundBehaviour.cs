@@ -16,7 +16,7 @@ public class BackgroundBehaviour : MonoBehaviour
 	}
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 		// ѕолучаем позицию компонента RectTransform
 		Vector3 _position = RectTransform.anchoredPosition;
@@ -27,10 +27,10 @@ public class BackgroundBehaviour : MonoBehaviour
 		//Debug.Log("_position.y" + _position.y);
 
 		// ≈сли дорога вышла за пределы экрана, переместите ее обратно в начальную позицию
-		if (_position.y <= -2050f) // «десь -10.0f - это примерное рассто€ние, на которое дорога должна перемещатьс€
+		if (_position.y <= -2048f) // «десь -10.0f - это примерное рассто€ние, на которое дорога должна перемещатьс€
 		{
 			// ѕереместите контейнер в начальную позицию
-			RectTransform.anchoredPosition = new Vector3( _position.x, 2047f, _position.z);
+			RectTransform.anchoredPosition = new Vector3( _position.x, 2048f, _position.z);
 		}
 	}
 }
