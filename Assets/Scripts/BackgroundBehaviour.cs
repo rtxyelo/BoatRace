@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackgroundBehaviour : MonoBehaviour
 {
-	private RectTransform _rectTransform;
+	public RectTransform RectTransform;
 	public float Speed = 10.0f; // Скорость движения дороги
 
 
@@ -12,14 +12,14 @@ public class BackgroundBehaviour : MonoBehaviour
 	void Start()
     {
 		// Получаем компонент RectTransform текущего объекта
-		_rectTransform = GetComponent<RectTransform>();
+		RectTransform = GetComponent<RectTransform>();
 	}
 
     // Update is called once per frame
     void Update()
     {
 		// Получаем позицию компонента RectTransform
-		Vector3 _position = _rectTransform.anchoredPosition;
+		Vector3 _position = RectTransform.anchoredPosition;
 
 		// Двигаем контейнер влево (или в другом направлении) с постоянной скоростью
 		transform.Translate(Vector3.down * Speed * Time.deltaTime);
@@ -30,7 +30,7 @@ public class BackgroundBehaviour : MonoBehaviour
 		if (_position.y <= -4000f) // Здесь -10.0f - это примерное расстояние, на которое дорога должна перемещаться
 		{
 			// Переместите контейнер в начальную позицию
-			_rectTransform.anchoredPosition = new Vector3( _position.x, 4000f, _position.z);
+			RectTransform.anchoredPosition = new Vector3( _position.x, 4000f, _position.z);
 		}
 	}
 }
