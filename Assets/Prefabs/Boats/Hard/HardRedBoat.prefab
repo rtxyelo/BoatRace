@@ -4044,7 +4044,7 @@ GameObject:
   - component: {fileID: 319264249954525664}
   m_Layer: 0
   m_Name: HardRedBoat
-  m_TagString: Untagged
+  m_TagString: HardBoat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4136,7 +4136,7 @@ Animator:
   m_GameObject: {fileID: 7296368697719381468}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3f258685c155cb6459a54fe0272d3980, type: 2}
+  m_Controller: {fileID: 9100000, guid: f4552dcccc8fe444994e71a9bebbba97, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

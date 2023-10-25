@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -5000596115272047578}
   m_Layer: 0
   m_Name: EasyBlackBoat
-  m_TagString: Untagged
+  m_TagString: EasyBoat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
