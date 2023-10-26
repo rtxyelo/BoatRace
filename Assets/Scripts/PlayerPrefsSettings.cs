@@ -35,11 +35,11 @@ public class PlayerPrefsSettings : MonoBehaviour
 		}
 
 
-		PlayerPrefs.SetInt(_currentBoatKey, 0);
-		PlayerPrefs.SetInt(_moneyCountKey, 0);
-		PlayerPrefs.SetInt(_hasNormalBoatKey, 0);
-		PlayerPrefs.SetInt(_hasMeduimBoatKey, 0);
-		PlayerPrefs.SetInt(_hasHardBoatKey, 0);
+		//PlayerPrefs.SetInt(_currentBoatKey, 0);
+		//PlayerPrefs.SetInt(_moneyCountKey, 0);
+		//PlayerPrefs.SetInt(_hasNormalBoatKey, 0);
+		//PlayerPrefs.SetInt(_hasMeduimBoatKey, 0);
+		//PlayerPrefs.SetInt(_hasHardBoatKey, 0);
 
 
 		Debug.Log("currentBoat " + PlayerPrefs.GetInt(_currentBoatKey, 0));

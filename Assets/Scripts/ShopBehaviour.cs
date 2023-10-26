@@ -59,11 +59,11 @@ public class ShopBehaviour : MonoBehaviour
 		}
 
 		
-		PlayerPrefs.SetInt(_currentBoatKey, 0);
-		PlayerPrefs.SetInt(_moneyCountKey, 0);
-		PlayerPrefs.SetInt(_hasNormalBoatKey, 0);
-		PlayerPrefs.SetInt(_hasMeduimBoatKey, 0);
-		PlayerPrefs.SetInt(_hasHardBoatKey, 0);
+		//PlayerPrefs.SetInt(_currentBoatKey, 0);
+		//PlayerPrefs.SetInt(_moneyCountKey, 0);
+		//PlayerPrefs.SetInt(_hasNormalBoatKey, 0);
+		//PlayerPrefs.SetInt(_hasMeduimBoatKey, 0);
+		//PlayerPrefs.SetInt(_hasHardBoatKey, 0);
 		
 
 		Debug.Log("currentBoat " + PlayerPrefs.GetInt(_currentBoatKey, 0));
@@ -76,6 +76,13 @@ public class ShopBehaviour : MonoBehaviour
 		_selectBtnTextShadow = _selectBtnTextShadowObj.GetComponent<TMP_Text>();
 		_balanceText = _balanceObj.GetComponent<TMP_Text>();
 		_balanceText.text = "$ " + PlayerPrefs.GetInt(_moneyCountKey, 0).ToString();
+
+		if (curentBoat == PlayerPrefs.GetInt(_currentBoatKey, 0))
+		{
+			PlayerPrefs.SetInt(_currentBoatKey, 0);
+			_selectBtnText.text = "Selected";
+			_selectBtnTextShadow.text = "Selected";
+		}
 	}
 
 	// Update is called once per frame

@@ -94,13 +94,14 @@ GameObject:
   m_Component:
   - component: {fileID: 7526861581239157355}
   - component: {fileID: 1526614222410610013}
+  - component: {fileID: 6958973446760615395}
   m_Layer: 0
   m_Name: MediumBlueBoat
   m_TagString: MeduimBoat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7526861581239157355
 Transform:
   m_ObjectHideFlags: 0
@@ -156,6 +157,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6958973446760615395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430364348990864315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Timer: {fileID: 0}
+  _playerBoat: 1
+  _winTable: {fileID: 0}
+  _loseTable: {fileID: 0}
+  _darkFilter: {fileID: 0}
+  _backBtn: {fileID: 0}
 --- !u!1 &1556705305147089675
 GameObject:
   m_ObjectHideFlags: 0

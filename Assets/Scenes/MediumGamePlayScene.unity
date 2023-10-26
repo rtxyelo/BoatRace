@@ -257,6 +257,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasText: {fileID: 655574140}
+  time: 0
+  isStart: 0
 --- !u!1001 &83996794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -269,8 +271,40 @@ PrefabInstance:
       propertyPath: m_Name
       value: MediumBlackBoat
       objectReference: {fileID: 0}
-    - target: {fileID: 430364348990864315, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 4276721177313024780, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 4276721177313024780, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 4276721177313024780, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 4276721177313024780, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
+    - target: {fileID: 5914552362024680723, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 5914552362024680723, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 5914552362024680723, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 5914552362024680723, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
+    - target: {fileID: 5914552362024680723, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
+      propertyPath: _playerBoat
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7526861581239157355, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
@@ -316,10 +350,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 430364348990864315, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 83996797}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
 --- !u!4 &83996795 stripped
 Transform:
@@ -331,24 +362,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 430364348990864315, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
   m_PrefabInstance: {fileID: 83996794}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &83996797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 83996796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerBoat: 0
-  _winTable: {fileID: 1713562743}
-  _winText: {fileID: 1713562742}
-  _loseTable: {fileID: 2051450388}
-  _darkFilter: {fileID: 1137819342}
-  _backBtn: {fileID: 628485540}
 --- !u!1 &124339499
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,6 +738,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4479901026467325951, guid: d29930b11b7461f43ab4970083facc52, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 4479901026467325951, guid: d29930b11b7461f43ab4970083facc52, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 4479901026467325951, guid: d29930b11b7461f43ab4970083facc52, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 4479901026467325951, guid: d29930b11b7461f43ab4970083facc52, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
     - target: {fileID: 6534149097211659978, guid: d29930b11b7461f43ab4970083facc52, type: 3}
       propertyPath: m_Name
       value: NormalBlueBoat
@@ -736,10 +765,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6534149097211659978, guid: d29930b11b7461f43ab4970083facc52, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 514252275}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d29930b11b7461f43ab4970083facc52, type: 3}
 --- !u!4 &514252272 stripped
 Transform:
@@ -751,24 +777,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6534149097211659978, guid: d29930b11b7461f43ab4970083facc52, type: 3}
   m_PrefabInstance: {fileID: 514252271}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &514252275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514252273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerBoat: 1
-  _winTable: {fileID: 1713562743}
-  _winText: {fileID: 1713562742}
-  _loseTable: {fileID: 2051450388}
-  _darkFilter: {fileID: 1137819342}
-  _backBtn: {fileID: 628485540}
 --- !u!1 &570004227 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 102826211322263144, guid: 6ec81a2026d0ba84d97215a458414303, type: 3}
@@ -927,6 +935,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 400849177}
     m_Modifications:
+    - target: {fileID: 79644847198000255, guid: 41e243c283ce7bf45a2b6abf6a0b4512, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 79644847198000255, guid: 41e243c283ce7bf45a2b6abf6a0b4512, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 79644847198000255, guid: 41e243c283ce7bf45a2b6abf6a0b4512, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 79644847198000255, guid: 41e243c283ce7bf45a2b6abf6a0b4512, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
     - target: {fileID: 1171821173995988984, guid: 41e243c283ce7bf45a2b6abf6a0b4512, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -978,10 +1002,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6534149097211659978, guid: 41e243c283ce7bf45a2b6abf6a0b4512, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 631547841}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41e243c283ce7bf45a2b6abf6a0b4512, type: 3}
 --- !u!4 &631547838 stripped
 Transform:
@@ -993,24 +1014,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6534149097211659978, guid: 41e243c283ce7bf45a2b6abf6a0b4512, type: 3}
   m_PrefabInstance: {fileID: 631547837}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &631547841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631547839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerBoat: 1
-  _winTable: {fileID: 1713562743}
-  _winText: {fileID: 1713562742}
-  _loseTable: {fileID: 2051450388}
-  _darkFilter: {fileID: 1137819342}
-  _backBtn: {fileID: 628485540}
 --- !u!1 &655574138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,6 +1156,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 400849177}
     m_Modifications:
+    - target: {fileID: 1404381241315255664, guid: 92ff02773245551449058e698d40372a, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 1404381241315255664, guid: 92ff02773245551449058e698d40372a, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 1404381241315255664, guid: 92ff02773245551449058e698d40372a, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 1404381241315255664, guid: 92ff02773245551449058e698d40372a, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
     - target: {fileID: 7296368697719381468, guid: 92ff02773245551449058e698d40372a, type: 3}
       propertyPath: m_Name
       value: HardBlueBoat
@@ -1204,10 +1223,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7296368697719381468, guid: 92ff02773245551449058e698d40372a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 770724325}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92ff02773245551449058e698d40372a, type: 3}
 --- !u!4 &770724322 stripped
 Transform:
@@ -1219,24 +1235,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7296368697719381468, guid: 92ff02773245551449058e698d40372a, type: 3}
   m_PrefabInstance: {fileID: 770724321}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &770724325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770724323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerBoat: 1
-  _winTable: {fileID: 1713562743}
-  _winText: {fileID: 1713562742}
-  _loseTable: {fileID: 2051450388}
-  _darkFilter: {fileID: 1137819342}
-  _backBtn: {fileID: 628485540}
 --- !u!1 &870224899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,14 +1311,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 414951542}
     m_Modifications:
+    - target: {fileID: 31283344807027429, guid: bad367fdc331b924586d9af85eab927f, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 31283344807027429, guid: bad367fdc331b924586d9af85eab927f, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 31283344807027429, guid: bad367fdc331b924586d9af85eab927f, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 31283344807027429, guid: bad367fdc331b924586d9af85eab927f, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
+    - target: {fileID: 31283344807027429, guid: bad367fdc331b924586d9af85eab927f, type: 3}
+      propertyPath: _playerBoat
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 430364348990864315, guid: bad367fdc331b924586d9af85eab927f, type: 3}
       propertyPath: m_Name
       value: MediumRedBoat
       objectReference: {fileID: 0}
-    - target: {fileID: 430364348990864315, guid: bad367fdc331b924586d9af85eab927f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 2766414337123133570, guid: bad367fdc331b924586d9af85eab927f, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 2766414337123133570, guid: bad367fdc331b924586d9af85eab927f, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 2766414337123133570, guid: bad367fdc331b924586d9af85eab927f, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 2766414337123133570, guid: bad367fdc331b924586d9af85eab927f, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
     - target: {fileID: 7526861581239157355, guid: bad367fdc331b924586d9af85eab927f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1364,10 +1394,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 430364348990864315, guid: bad367fdc331b924586d9af85eab927f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 882620376}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bad367fdc331b924586d9af85eab927f, type: 3}
 --- !u!4 &882620374 stripped
 Transform:
@@ -1379,24 +1406,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 430364348990864315, guid: bad367fdc331b924586d9af85eab927f, type: 3}
   m_PrefabInstance: {fileID: 882620373}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &882620376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882620375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerBoat: 0
-  _winTable: {fileID: 1713562743}
-  _winText: {fileID: 1713562742}
-  _loseTable: {fileID: 2051450388}
-  _darkFilter: {fileID: 1137819342}
-  _backBtn: {fileID: 628485540}
 --- !u!1 &1045661580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,6 +1489,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2491708734492149446, guid: 3841c44a8b8893546869353cc70419ad, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 2491708734492149446, guid: 3841c44a8b8893546869353cc70419ad, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 2491708734492149446, guid: 3841c44a8b8893546869353cc70419ad, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 2491708734492149446, guid: 3841c44a8b8893546869353cc70419ad, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
     - target: {fileID: 6534149097211659978, guid: 3841c44a8b8893546869353cc70419ad, type: 3}
       propertyPath: m_Name
       value: NormalRedBoat
@@ -1491,10 +1516,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6534149097211659978, guid: 3841c44a8b8893546869353cc70419ad, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1110361106}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3841c44a8b8893546869353cc70419ad, type: 3}
 --- !u!4 &1110361103 stripped
 Transform:
@@ -1506,24 +1528,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6534149097211659978, guid: 3841c44a8b8893546869353cc70419ad, type: 3}
   m_PrefabInstance: {fileID: 1110361102}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1110361106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1110361104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerBoat: 1
-  _winTable: {fileID: 1713562743}
-  _winText: {fileID: 1713562742}
-  _loseTable: {fileID: 2051450388}
-  _darkFilter: {fileID: 1137819342}
-  _backBtn: {fileID: 628485540}
 --- !u!1 &1137819342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,8 +1615,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: MediumBlueBoat
       objectReference: {fileID: 0}
-    - target: {fileID: 430364348990864315, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 6958973446760615395, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 6958973446760615395, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 6958973446760615395, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 6958973446760615395, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
+    - target: {fileID: 6958973446760615395, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
+      propertyPath: _playerBoat
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7526861581239157355, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
@@ -1655,13 +1675,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8919293068195450980, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 8919293068195450980, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 8919293068195450980, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 8919293068195450980, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 430364348990864315, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1214376366}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
 --- !u!4 &1214376364 stripped
 Transform:
@@ -1673,24 +1706,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 430364348990864315, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
   m_PrefabInstance: {fileID: 1214376363}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1214376366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214376365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerBoat: 0
-  _winTable: {fileID: 1713562743}
-  _winText: {fileID: 1713562742}
-  _loseTable: {fileID: 2051450388}
-  _darkFilter: {fileID: 1137819342}
-  _backBtn: {fileID: 628485540}
 --- !u!1001 &1278107818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1707,6 +1722,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5914552362024680723, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 5914552362024680723, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 5914552362024680723, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 5914552362024680723, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
     - target: {fileID: 7526861581239157355, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1750,10 +1781,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 430364348990864315, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1278107822}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
 --- !u!4 &1278107819 stripped
 Transform:
@@ -1765,24 +1793,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 430364348990864315, guid: 436dfbb29ab43cb45ae4def1183b8404, type: 3}
   m_PrefabInstance: {fileID: 1278107818}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1278107822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1278107820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerBoat: 1
-  _winTable: {fileID: 1713562743}
-  _winText: {fileID: 1713562742}
-  _loseTable: {fileID: 2051450388}
-  _darkFilter: {fileID: 1137819342}
-  _backBtn: {fileID: 628485540}
 --- !u!1001 &1278717918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1799,6 +1809,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6958973446760615395, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 6958973446760615395, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 6958973446760615395, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 6958973446760615395, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
     - target: {fileID: 7526861581239157355, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1842,10 +1868,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 430364348990864315, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1278717922}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
 --- !u!4 &1278717919 stripped
 Transform:
@@ -1857,24 +1880,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 430364348990864315, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
   m_PrefabInstance: {fileID: 1278717918}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1278717922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1278717920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerBoat: 1
-  _winTable: {fileID: 1713562743}
-  _winText: {fileID: 1713562742}
-  _loseTable: {fileID: 2051450388}
-  _darkFilter: {fileID: 1137819342}
-  _backBtn: {fileID: 628485540}
 --- !u!1001 &1316452689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1923,6 +1928,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3842942348296261733, guid: 95a8f33f691662a4c8e79170aa6725ca, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 3842942348296261733, guid: 95a8f33f691662a4c8e79170aa6725ca, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 3842942348296261733, guid: 95a8f33f691662a4c8e79170aa6725ca, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 3842942348296261733, guid: 95a8f33f691662a4c8e79170aa6725ca, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
     - target: {fileID: 6534149097211659978, guid: 95a8f33f691662a4c8e79170aa6725ca, type: 3}
       propertyPath: m_Name
       value: NormalYellowBoat
@@ -1934,10 +1955,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6534149097211659978, guid: 95a8f33f691662a4c8e79170aa6725ca, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1316452693}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95a8f33f691662a4c8e79170aa6725ca, type: 3}
 --- !u!4 &1316452690 stripped
 Transform:
@@ -1949,24 +1967,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6534149097211659978, guid: 95a8f33f691662a4c8e79170aa6725ca, type: 3}
   m_PrefabInstance: {fileID: 1316452689}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1316452693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316452691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerBoat: 1
-  _winTable: {fileID: 1713562743}
-  _winText: {fileID: 1713562742}
-  _loseTable: {fileID: 2051450388}
-  _darkFilter: {fileID: 1137819342}
-  _backBtn: {fileID: 628485540}
 --- !u!1001 &1349320617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1983,6 +1983,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4181041003650630028, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 4181041003650630028, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 4181041003650630028, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 4181041003650630028, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
     - target: {fileID: 7526861581239157355, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2026,10 +2042,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 430364348990864315, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1349320621}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
 --- !u!4 &1349320618 stripped
 Transform:
@@ -2041,24 +2054,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 430364348990864315, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
   m_PrefabInstance: {fileID: 1349320617}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1349320621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349320619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerBoat: 1
-  _winTable: {fileID: 1713562743}
-  _winText: {fileID: 1713562742}
-  _loseTable: {fileID: 2051450388}
-  _darkFilter: {fileID: 1137819342}
-  _backBtn: {fileID: 628485540}
 --- !u!1 &1410609369
 GameObject:
   m_ObjectHideFlags: 0
@@ -2110,6 +2105,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2481748738270781341, guid: 08b1003b63ed5cb4d80f9ccce1e40411, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 2481748738270781341, guid: 08b1003b63ed5cb4d80f9ccce1e40411, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 2481748738270781341, guid: 08b1003b63ed5cb4d80f9ccce1e40411, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 2481748738270781341, guid: 08b1003b63ed5cb4d80f9ccce1e40411, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
     - target: {fileID: 8161364367337574507, guid: 08b1003b63ed5cb4d80f9ccce1e40411, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2153,10 +2164,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 570760300342965248, guid: 08b1003b63ed5cb4d80f9ccce1e40411, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1511323732}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08b1003b63ed5cb4d80f9ccce1e40411, type: 3}
 --- !u!4 &1511323729 stripped
 Transform:
@@ -2168,24 +2176,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 570760300342965248, guid: 08b1003b63ed5cb4d80f9ccce1e40411, type: 3}
   m_PrefabInstance: {fileID: 1511323728}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1511323732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1511323730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerBoat: 1
-  _winTable: {fileID: 1713562743}
-  _winText: {fileID: 1713562742}
-  _loseTable: {fileID: 2051450388}
-  _darkFilter: {fileID: 1137819342}
-  _backBtn: {fileID: 628485540}
 --- !u!1001 &1556632286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2293,8 +2283,40 @@ PrefabInstance:
       propertyPath: m_Name
       value: MediumYellowBoat
       objectReference: {fileID: 0}
-    - target: {fileID: 430364348990864315, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 3283980272534043502, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 3283980272534043502, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 3283980272534043502, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 3283980272534043502, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
+    - target: {fileID: 4181041003650630028, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 4181041003650630028, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 4181041003650630028, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 4181041003650630028, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
+    - target: {fileID: 4181041003650630028, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
+      propertyPath: _playerBoat
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7526861581239157355, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
@@ -2340,10 +2362,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 430364348990864315, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1576600726}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
 --- !u!4 &1576600724 stripped
 Transform:
@@ -2355,24 +2374,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 430364348990864315, guid: bff6faa6f280f2a47a8ebee8e3183ab1, type: 3}
   m_PrefabInstance: {fileID: 1576600723}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1576600726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1576600725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerBoat: 0
-  _winTable: {fileID: 1713562743}
-  _winText: {fileID: 1713562742}
-  _loseTable: {fileID: 2051450388}
-  _darkFilter: {fileID: 1137819342}
-  _backBtn: {fileID: 628485540}
 --- !u!1001 &1675383517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2429,13 +2430,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8708015126233864017, guid: 19391b0e268355848b40f03dcf1e8f2c, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 8708015126233864017, guid: 19391b0e268355848b40f03dcf1e8f2c, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 8708015126233864017, guid: 19391b0e268355848b40f03dcf1e8f2c, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 8708015126233864017, guid: 19391b0e268355848b40f03dcf1e8f2c, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 570760300342965248, guid: 19391b0e268355848b40f03dcf1e8f2c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1675383521}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19391b0e268355848b40f03dcf1e8f2c, type: 3}
 --- !u!4 &1675383518 stripped
 Transform:
@@ -2447,24 +2461,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 570760300342965248, guid: 19391b0e268355848b40f03dcf1e8f2c, type: 3}
   m_PrefabInstance: {fileID: 1675383517}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1675383521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675383519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerBoat: 1
-  _winTable: {fileID: 1713562743}
-  _winText: {fileID: 1713562742}
-  _loseTable: {fileID: 2051450388}
-  _darkFilter: {fileID: 1137819342}
-  _backBtn: {fileID: 628485540}
 --- !u!1001 &1683382046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2473,6 +2469,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 400849177}
     m_Modifications:
+    - target: {fileID: 31283344807027429, guid: bad367fdc331b924586d9af85eab927f, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 31283344807027429, guid: bad367fdc331b924586d9af85eab927f, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 31283344807027429, guid: bad367fdc331b924586d9af85eab927f, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 31283344807027429, guid: bad367fdc331b924586d9af85eab927f, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
     - target: {fileID: 430364348990864315, guid: bad367fdc331b924586d9af85eab927f, type: 3}
       propertyPath: m_Name
       value: MediumRedBoat
@@ -2524,10 +2536,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 430364348990864315, guid: bad367fdc331b924586d9af85eab927f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1683382050}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bad367fdc331b924586d9af85eab927f, type: 3}
 --- !u!4 &1683382047 stripped
 Transform:
@@ -2539,24 +2548,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 430364348990864315, guid: bad367fdc331b924586d9af85eab927f, type: 3}
   m_PrefabInstance: {fileID: 1683382046}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1683382050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1683382048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerBoat: 1
-  _winTable: {fileID: 1713562743}
-  _winText: {fileID: 1713562742}
-  _loseTable: {fileID: 2051450388}
-  _darkFilter: {fileID: 1137819342}
-  _backBtn: {fileID: 628485540}
 --- !u!1001 &1713562740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2677,6 +2668,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: MediumGamePlayScene
       objectReference: {fileID: 0}
+    - target: {fileID: 4765386324186562314, guid: 6ec81a2026d0ba84d97215a458414303, type: 3}
+      propertyPath: Timer
+      value: 
+      objectReference: {fileID: 56386117}
+    - target: {fileID: 4765386324186562314, guid: 6ec81a2026d0ba84d97215a458414303, type: 3}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 1713562744}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2703,6 +2702,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1851600040483027095, guid: 6ec81a2026d0ba84d97215a458414303, type: 3}
   m_PrefabInstance: {fileID: 1713562740}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1713562744 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7307824032932698653, guid: 6ec81a2026d0ba84d97215a458414303, type: 3}
+  m_PrefabInstance: {fileID: 1713562740}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1792002665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2759,13 +2769,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8628797559294109198, guid: b1d004014c10def4c9bd80b54e01c437, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 8628797559294109198, guid: b1d004014c10def4c9bd80b54e01c437, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 8628797559294109198, guid: b1d004014c10def4c9bd80b54e01c437, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 8628797559294109198, guid: b1d004014c10def4c9bd80b54e01c437, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7296368697719381468, guid: b1d004014c10def4c9bd80b54e01c437, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1792002669}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1d004014c10def4c9bd80b54e01c437, type: 3}
 --- !u!1 &1792002666 stripped
 GameObject:
@@ -2777,24 +2800,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8622408962333703936, guid: b1d004014c10def4c9bd80b54e01c437, type: 3}
   m_PrefabInstance: {fileID: 1792002665}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1792002669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1792002666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerBoat: 1
-  _winTable: {fileID: 1713562743}
-  _winText: {fileID: 1713562742}
-  _loseTable: {fileID: 2051450388}
-  _darkFilter: {fileID: 1137819342}
-  _backBtn: {fileID: 628485540}
 --- !u!1001 &1803822974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2810,6 +2815,26 @@ PrefabInstance:
     - target: {fileID: 570760300342965248, guid: 6389ce1fca0f53a4f8af2a1890b3bc67, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787118175892007835, guid: 6389ce1fca0f53a4f8af2a1890b3bc67, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 4787118175892007835, guid: 6389ce1fca0f53a4f8af2a1890b3bc67, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 4787118175892007835, guid: 6389ce1fca0f53a4f8af2a1890b3bc67, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 4787118175892007835, guid: 6389ce1fca0f53a4f8af2a1890b3bc67, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
+    - target: {fileID: 4787118175892007835, guid: 6389ce1fca0f53a4f8af2a1890b3bc67, type: 3}
+      propertyPath: _playerBoat
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8161364367337574507, guid: 6389ce1fca0f53a4f8af2a1890b3bc67, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2854,10 +2879,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 570760300342965248, guid: 6389ce1fca0f53a4f8af2a1890b3bc67, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1803822978}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6389ce1fca0f53a4f8af2a1890b3bc67, type: 3}
 --- !u!4 &1803822975 stripped
 Transform:
@@ -2869,24 +2891,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 570760300342965248, guid: 6389ce1fca0f53a4f8af2a1890b3bc67, type: 3}
   m_PrefabInstance: {fileID: 1803822974}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1803822978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1803822976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerBoat: 1
-  _winTable: {fileID: 1713562743}
-  _winText: {fileID: 1713562742}
-  _loseTable: {fileID: 2051450388}
-  _darkFilter: {fileID: 1137819342}
-  _backBtn: {fileID: 628485540}
 --- !u!1 &1827955030
 GameObject:
   m_ObjectHideFlags: 0
@@ -3063,6 +3067,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5754420968515713525, guid: 739904b33e0078f4b94d7e93c0db978f, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 5754420968515713525, guid: 739904b33e0078f4b94d7e93c0db978f, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 5754420968515713525, guid: 739904b33e0078f4b94d7e93c0db978f, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 5754420968515713525, guid: 739904b33e0078f4b94d7e93c0db978f, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
     - target: {fileID: 8161364367337574507, guid: 739904b33e0078f4b94d7e93c0db978f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3106,10 +3126,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 570760300342965248, guid: 739904b33e0078f4b94d7e93c0db978f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1967445422}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 739904b33e0078f4b94d7e93c0db978f, type: 3}
 --- !u!4 &1967445419 stripped
 Transform:
@@ -3121,24 +3138,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 570760300342965248, guid: 739904b33e0078f4b94d7e93c0db978f, type: 3}
   m_PrefabInstance: {fileID: 1967445418}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1967445422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967445420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerBoat: 1
-  _winTable: {fileID: 1713562743}
-  _winText: {fileID: 1713562742}
-  _loseTable: {fileID: 2051450388}
-  _darkFilter: {fileID: 1137819342}
-  _backBtn: {fileID: 628485540}
 --- !u!1001 &2051450386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3306,13 +3305,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8755620009231073772, guid: 5bccc8497e07ace4ca3c891d8d41aef4, type: 3}
+      propertyPath: _backBtn
+      value: 
+      objectReference: {fileID: 628485540}
+    - target: {fileID: 8755620009231073772, guid: 5bccc8497e07ace4ca3c891d8d41aef4, type: 3}
+      propertyPath: _winTable
+      value: 
+      objectReference: {fileID: 1713562743}
+    - target: {fileID: 8755620009231073772, guid: 5bccc8497e07ace4ca3c891d8d41aef4, type: 3}
+      propertyPath: _loseTable
+      value: 
+      objectReference: {fileID: 2051450388}
+    - target: {fileID: 8755620009231073772, guid: 5bccc8497e07ace4ca3c891d8d41aef4, type: 3}
+      propertyPath: _darkFilter
+      value: 
+      objectReference: {fileID: 1137819342}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7296368697719381468, guid: 5bccc8497e07ace4ca3c891d8d41aef4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2064142133}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bccc8497e07ace4ca3c891d8d41aef4, type: 3}
 --- !u!4 &2064142130 stripped
 Transform:
@@ -3324,24 +3336,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7296368697719381468, guid: 5bccc8497e07ace4ca3c891d8d41aef4, type: 3}
   m_PrefabInstance: {fileID: 2064142129}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2064142133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064142131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerBoat: 1
-  _winTable: {fileID: 1713562743}
-  _winText: {fileID: 1713562742}
-  _loseTable: {fileID: 2051450388}
-  _darkFilter: {fileID: 1137819342}
-  _backBtn: {fileID: 628485540}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

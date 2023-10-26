@@ -5,6 +5,9 @@ using TMPro;
 
 public class BoatBehaviour : MonoBehaviour
 {
+	[HideInInspector]
+	public GameObject Timer;
+
 	private bool _keyWasPressed = false;
 	[SerializeField] private bool _playerBoat;
 
@@ -18,20 +21,20 @@ public class BoatBehaviour : MonoBehaviour
 
 	private int _currentLevel;
 	private int _boatType;
+	private TimerBehaviour _TimerScript;
 
 	[SerializeField] private GameObject _winTable;
-	[SerializeField] private TMP_Text _winText;
 	[SerializeField] private GameObject _loseTable;
 	[SerializeField] private GameObject _darkFilter;
 	[SerializeField] private GameObject _backBtn;
 
-	private float time = 0f;
 	private bool _continueBtn;
 	private GameObject boat;
 	private GameObject finishLine;
 	private Animator anim;
 	private Rigidbody2D rb;
 	private Vector3 startPos;
+	private float _TimeDelta = Random.RandomRange(0.2f, 0.4f);
 
 	GameObject[] _easyTagDeactivate;
 	GameObject[] _normalTagDeactivate;
@@ -78,42 +81,57 @@ public class BoatBehaviour : MonoBehaviour
 		rb.gravityScale = 0;
 		rb.angularDrag = 0;
 
+		// Игрок изи лодка
 		if (_playerBoat && _boatType == 0)
 		{
-			rb.drag = 4;
+			rb.drag = 2.5f;
 		}
+		// Игрок Нормал лодка
 		else if (_playerBoat && _boatType == 1)
 		{
-			rb.drag = 3;
+			rb.drag = 2.1f;
 		}
+		// Игрок медиум лодка
 		else if (_playerBoat && _boatType == 2)
 		{
-			rb.drag = 2;
+			rb.drag = 1.4f;
 		}
+		// Игрок Хард лодка
 		else if (_playerBoat && _boatType == 3)
 		{
-			rb.drag = 1.5f;
+			rb.drag = 1.2f;
 		}
+		// Бот изи лодка
 		else if (!_playerBoat && _currentLevel == 0)
 		{
-			rb.drag = Random.Range(5.5f, 6f);
+			rb.drag = Random.Range(2f, 2.5f);
 		}
+		// Бот Нормал лодка
 		else if (!_playerBoat && _currentLevel == 1)
 		{
-			rb.drag = Random.Range(4.5f, 5f);
+			rb.drag = Random.Range(1.8f, 2.3f);
 		}
+		// Бот Медиум лодка
 		else if (!_playerBoat && _currentLevel == 2)
 		{
-			rb.drag = Random.Range(3.5f, 4f);
+			rb.drag = Random.Range(1.3f, 1.8f);
 		}
+		// Бот Хард лодка
 		else if (!_playerBoat && _currentLevel == 3)
 		{
-			rb.drag = Random.Range(1.5f, 2.5f);
+			rb.drag = Random.Range(1.1f, 1.35f);
 		}
 		_easyTagDeactivate = GameObject.FindGameObjectsWithTag("EasyBoat");
 		_normalTagDeactivate = GameObject.FindGameObjectsWithTag("NormalBoat");
 		_mediumTagDeactivate = GameObject.FindGameObjectsWithTag("MeduimBoat");
 		_hardTagDeactivate = GameObject.FindGameObjectsWithTag("HardBoat");
+
+		if (!Timer)
+		{
+			Timer = GameObject.Find("Timer");
+		}
+		_TimerScript = Timer.GetComponent<TimerBehaviour>();
+		_TimerScript.isStart = false;
 
 		Debug.Log("currentBoat " + PlayerPrefs.GetInt(_currentBoatKey, 0));
 		Debug.Log("moneyCount " + PlayerPrefs.GetInt(_moneyCountKey, 0));
@@ -125,19 +143,21 @@ public class BoatBehaviour : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		// Боты
 		if (!_playerBoat && _continueBtn)
 		{
 			if (Input.GetKeyDown(KeyCode.Space) && !_keyWasPressed)
 			{
 				_keyWasPressed = true;
+				_TimerScript.isStart = true;
 			}
 
-			//Debug.Log("Velocity " + rb.velocity);
-
-			if (_keyWasPressed && rb.velocity.y < 0.3f)
+			_TimeDelta -= Time.deltaTime;
+			if (_keyWasPressed && _TimeDelta < 0.1f)
 			{
 				anim.Play(boat.tag);
 				rb.AddForce(new Vector2(0, 20));
+				_TimeDelta = Random.RandomRange(0.2f, 0.4f);
 			}
 			if (boat.transform.position.y > finishLine.transform.position.y)
 			{
@@ -146,6 +166,7 @@ public class BoatBehaviour : MonoBehaviour
 				_keyWasPressed = false;
 			}
 		}
+		// Игрок
 		else if (_continueBtn)
 		{
 			//Debug.Log("Player velocity " + rb.velocity);
@@ -155,6 +176,7 @@ public class BoatBehaviour : MonoBehaviour
 				_backBtn.SetActive(false);
 				anim.Play(boat.tag);
 				rb.AddForce(new Vector2(0, 20));
+				_TimerScript.isStart = true;
 			}
 			if (boat.transform.position.y > finishLine.transform.position.y)
 			{
@@ -202,7 +224,6 @@ public class BoatBehaviour : MonoBehaviour
 			_continueBtn = false;
 			_darkFilter.SetActive(true);
 			_winTable.SetActive(true);
-			_winText.text = "time " + ((uint)time).ToString() + "s";
 			PlayerPrefs.SetInt(_moneyCountKey, PlayerPrefs.GetInt(_moneyCountKey, 0) + 200);
 		}
 		// If lose

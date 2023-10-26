@@ -4042,13 +4042,14 @@ GameObject:
   m_Component:
   - component: {fileID: 8622408962333703936}
   - component: {fileID: -2759839005447901578}
+  - component: {fileID: 8628797559294109198}
   m_Layer: 0
   m_Name: HardYellowBoat
   m_TagString: HardBoat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8622408962333703936
 Transform:
   m_ObjectHideFlags: 0
@@ -4147,6 +4148,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8628797559294109198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7296368697719381468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a01e90da4f6de46b8dd0d157a00978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Timer: {fileID: 0}
+  _playerBoat: 1
+  _winTable: {fileID: 0}
+  _loseTable: {fileID: 0}
+  _darkFilter: {fileID: 0}
+  _backBtn: {fileID: 0}
 --- !u!1 &7621575870049161628
 GameObject:
   m_ObjectHideFlags: 0

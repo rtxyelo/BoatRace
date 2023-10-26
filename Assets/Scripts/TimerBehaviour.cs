@@ -8,9 +8,13 @@ public class TimerBehaviour : MonoBehaviour
 {
     public TMP_Text canvasText;
 
-    private float time = 0f;
-    // Start is called before the first frame update
-    void Start()
+	[HideInInspector]
+	public float time = 0f;
+    [HideInInspector]
+	public bool isStart = false;
+
+	// Start is called before the first frame update
+	void Start()
     {
         canvasText.text = "0s";
     }
@@ -18,7 +22,10 @@ public class TimerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-		canvasText.text = ((uint)time).ToString() + "s";
+        if (isStart)
+        {
+            time += Time.deltaTime;
+            canvasText.text = ((uint)time).ToString() + "s";
+        }
     }
 }
