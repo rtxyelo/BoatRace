@@ -65,6 +65,7 @@ public class EasyBoatsPositionsBehaviour : MonoBehaviour
 	private Transform _hardYellowBoatPositionPlayer;
 
 	private string _currentBoatKey = "CurrentBoat";
+	private string _currentBoatColorKey = "_currentBoatColorKey";
 	private string _currentLevelKey = "CurrentLevel";
 	private int _boatType;
 	private Dictionary<int, int[]> _positionVariations = new Dictionary<int, int[]>();
@@ -76,6 +77,10 @@ public class EasyBoatsPositionsBehaviour : MonoBehaviour
 		{
 			PlayerPrefs.SetInt(_currentBoatKey, 0);
 		}
+		if (!PlayerPrefs.HasKey(_currentBoatColorKey))
+		{
+			PlayerPrefs.SetInt(_currentBoatColorKey, 0);
+		}
 		if (!PlayerPrefs.HasKey(_currentLevelKey))
 		{
 			PlayerPrefs.SetInt(_currentLevelKey, 0);
@@ -83,6 +88,7 @@ public class EasyBoatsPositionsBehaviour : MonoBehaviour
 
 		PlayerPrefs.SetInt(_currentLevelKey, 0);
 		_boatType = PlayerPrefs.GetInt(_currentBoatKey, 0);
+		_boatType = PlayerPrefs.GetInt(_currentBoatColorKey, 0);
 
 		Debug.Log("boatType " + _boatType);
 		
@@ -281,7 +287,8 @@ public class EasyBoatsPositionsBehaviour : MonoBehaviour
 					break;
 			}
 		}
-		
+
+		PlayerPrefs.SetInt(_currentBoatColorKey, _freePositions[1]);
 	}
 
 }
