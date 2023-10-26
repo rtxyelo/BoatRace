@@ -28,6 +28,7 @@ public class BoatBehaviour : MonoBehaviour
 	[SerializeField] private GameObject _darkFilter;
 	[SerializeField] private GameObject _backBtn;
 
+	private bool isFirstTouch = false;
 	private bool _continueBtn;
 	private GameObject boat;
 	private GameObject finishLine;
@@ -144,10 +145,17 @@ public class BoatBehaviour : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		// Проверяем, есть ли касания на экране.
+		if (Input.touchCount > 0)
+		{
+			// Получаем информацию о первом касании.
+			Touch firstTouch = Input.GetTouch(0);
+			isFirstTouch = true;
+		}
 		// Боты
 		if (!_playerBoat && _continueBtn)
 		{
-			if (Input.GetKeyDown(KeyCode.Space) && !_keyWasPressed)
+			if ((isFirstTouch || Input.GetKeyDown(KeyCode.Space)) && !_keyWasPressed)
 			{
 				_keyWasPressed = true;
 				_TimerScript.isStart = true;
@@ -171,8 +179,7 @@ public class BoatBehaviour : MonoBehaviour
 		else if (_continueBtn)
 		{
 			//Debug.Log("Player velocity " + rb.velocity);
-
-			if (Input.GetKeyDown(KeyCode.Space))
+			if (Input.GetKeyDown(KeyCode.Space) || Input.touchCount > 0)
 			{
 				_backBtn.SetActive(false);
 				anim.Play(boat.tag);
