@@ -34,7 +34,7 @@ public class BoatBehaviour : MonoBehaviour
 	private Animator anim;
 	private Rigidbody2D rb;
 	private Vector3 startPos;
-	private float _TimeDelta = Random.RandomRange(0.2f, 0.4f);
+	private float _TimeDelta;
 
 	GameObject[] _easyTagDeactivate;
 	GameObject[] _normalTagDeactivate;
@@ -43,6 +43,7 @@ public class BoatBehaviour : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
+		_TimeDelta = Random.Range(0.2f, 0.4f);
 		if (!PlayerPrefs.HasKey(_currentBoatKey))
 		{
 			PlayerPrefs.SetInt(_currentBoatKey, 0);

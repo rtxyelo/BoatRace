@@ -18,8 +18,16 @@ public class LoseTableBehaviour : MonoBehaviour
 		_currentBoat = PlayerPrefs.GetInt(_currentBoatKey, 0);
 		_currentBoatColor = PlayerPrefs.GetInt(_currentBoatColorKey, 0);
 		GameObject boat = Instantiate(boats[_currentBoat * 4 + _currentBoatColor], gameObject.transform);
-		boat.transform.localScale = new Vector3(90, 90, 1);
-
+		boat.SetActive(true);
+		if (_currentBoat == 3)
+		{
+			boat.transform.localScale = new Vector3(60, 60, 1);
+		}
+		else
+		{
+			boat.transform.localScale = new Vector3(90, 90, 1);
+		}
+		
 		if (!Timer)
 		{
 			Timer = GameObject.Find("Timer");
