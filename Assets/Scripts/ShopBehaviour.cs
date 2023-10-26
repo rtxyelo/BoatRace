@@ -58,13 +58,13 @@ public class ShopBehaviour : MonoBehaviour
 			PlayerPrefs.SetInt(_hasHardBoatKey, 0);
 		}
 
-		/*
+		
 		PlayerPrefs.SetInt(_currentBoatKey, 0);
-		PlayerPrefs.SetInt(_moneyCountKey, 10000);
+		PlayerPrefs.SetInt(_moneyCountKey, 0);
 		PlayerPrefs.SetInt(_hasNormalBoatKey, 0);
 		PlayerPrefs.SetInt(_hasMeduimBoatKey, 0);
 		PlayerPrefs.SetInt(_hasHardBoatKey, 0);
-		*/
+		
 
 		Debug.Log("currentBoat " + PlayerPrefs.GetInt(_currentBoatKey, 0));
 		Debug.Log("moneyCount " + PlayerPrefs.GetInt(_moneyCountKey, 0));

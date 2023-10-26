@@ -70,6 +70,13 @@ public class EasyBoatsPositionsBehaviour : MonoBehaviour
 	private int _boatType;
 	private Dictionary<int, int[]> _positionVariations = new Dictionary<int, int[]>();
 
+
+	private string _moneyCountKey = "MoneyCount";
+	private string _hasNormalBoatKey = "HasNormalBoat";
+	private string _hasMeduimBoatKey = "HasMediumBoat";
+	private string _hasHardBoatKey = "HasHardBoat";
+
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -88,9 +95,6 @@ public class EasyBoatsPositionsBehaviour : MonoBehaviour
 
 		PlayerPrefs.SetInt(_currentLevelKey, 0);
 		_boatType = PlayerPrefs.GetInt(_currentBoatKey, 0);
-		_boatType = PlayerPrefs.GetInt(_currentBoatColorKey, 0);
-
-		Debug.Log("boatType " + _boatType);
 		
 		// Enemy
 		_easyBlackBoatPosition = _easyBlackBoat.GetComponent<Transform>();
@@ -124,7 +128,13 @@ public class EasyBoatsPositionsBehaviour : MonoBehaviour
 			int[] variation = new int[] { i % 4, (i + 1) % 4, (i + 2) % 4, (i + 3) % 4 };
 			_positionVariations[i] = variation;
 		}
+		SetBoatPositionsByColor();
 
+		Debug.Log("currentBoat " + PlayerPrefs.GetInt(_currentBoatKey, 0));
+		Debug.Log("moneyCount " + PlayerPrefs.GetInt(_moneyCountKey, 0));
+		Debug.Log("_hasNormalBoat " + PlayerPrefs.GetInt(_hasNormalBoatKey, 0));
+		Debug.Log("hasMeduimBoat " + PlayerPrefs.GetInt(_hasMeduimBoatKey, 0));
+		Debug.Log("hasHardBoat " + PlayerPrefs.GetInt(_hasHardBoatKey, 0));
 	}
 
 	public void SetBoatPositionsByColor()

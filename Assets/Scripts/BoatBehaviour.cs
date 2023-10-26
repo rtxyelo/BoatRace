@@ -12,6 +12,9 @@ public class BoatBehaviour : MonoBehaviour
 	private string _currentLevelKey = "CurrentLevel";
 	private string _moneyCountKey = "MoneyCount";
 	private string _whoFinishedFirstKey = "WhoFinishedFirst";
+	private string _hasNormalBoatKey = "HasNormalBoat";
+	private string _hasMeduimBoatKey = "HasMediumBoat";
+	private string _hasHardBoatKey = "HasHardBoat";
 
 	private int _currentLevel;
 	private int _boatType;
@@ -111,6 +114,12 @@ public class BoatBehaviour : MonoBehaviour
 		_normalTagDeactivate = GameObject.FindGameObjectsWithTag("NormalBoat");
 		_mediumTagDeactivate = GameObject.FindGameObjectsWithTag("MeduimBoat");
 		_hardTagDeactivate = GameObject.FindGameObjectsWithTag("HardBoat");
+
+		Debug.Log("currentBoat " + PlayerPrefs.GetInt(_currentBoatKey, 0));
+		Debug.Log("moneyCount " + PlayerPrefs.GetInt(_moneyCountKey, 0));
+		Debug.Log("_hasNormalBoat " + PlayerPrefs.GetInt(_hasNormalBoatKey, 0));
+		Debug.Log("hasMeduimBoat " + PlayerPrefs.GetInt(_hasMeduimBoatKey, 0));
+		Debug.Log("hasHardBoat " + PlayerPrefs.GetInt(_hasHardBoatKey, 0));
 	}
 
 	// Update is called once per frame
@@ -141,10 +150,9 @@ public class BoatBehaviour : MonoBehaviour
 		{
 			//Debug.Log("Player velocity " + rb.velocity);
 
-			_backBtn.SetActive(false);
-
 			if (Input.GetKeyDown(KeyCode.Space))
 			{
+				_backBtn.SetActive(false);
 				anim.Play(boat.tag);
 				rb.AddForce(new Vector2(0, 20));
 			}

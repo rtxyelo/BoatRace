@@ -116,7 +116,7 @@ public class HardBoatsPositionsBehaviour : MonoBehaviour
 			int[] variation = new int[] { i % 4, (i + 1) % 4, (i + 2) % 4, (i + 3) % 4 };
 			_positionVariations[i] = variation;
 		}
-
+		SetBoatPositionsByColor();
 	}
 
 	public void SetBoatPositionsByColor()
