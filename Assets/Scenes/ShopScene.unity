@@ -812,6 +812,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619846054}
   m_CullTransparentMesh: 1
+--- !u!1 &621002868 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 430364348990864315, guid: 5a887747f1e69554fa7a4618abd1d2da, type: 3}
+  m_PrefabInstance: {fileID: 1589580737}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &658334510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,6 +1021,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8622408962333703936, guid: 92ff02773245551449058e698d40372a, type: 3}
   m_PrefabInstance: {fileID: 667621518}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &940385674 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7296368697719381468, guid: 92ff02773245551449058e698d40372a, type: 3}
+  m_PrefabInstance: {fileID: 667621518}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &980761944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,6 +1102,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980761944}
   m_CullTransparentMesh: 1
+--- !u!1 &983720656 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 570760300342965248, guid: 739904b33e0078f4b94d7e93c0db978f, type: 3}
+  m_PrefabInstance: {fileID: 531416746}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &999259624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,6 +1589,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4575597302138022323, guid: e2ef22fa7e47e1d4a8d20bcd11848b98, type: 3}
   m_PrefabInstance: {fileID: 1296172113667674804}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1411597272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6534149097211659978, guid: d29930b11b7461f43ab4970083facc52, type: 3}
+  m_PrefabInstance: {fileID: 1103449343}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1496093546
 GameObject:
   m_ObjectHideFlags: 0
@@ -2030,6 +2050,11 @@ MonoBehaviour:
   _selectBtnTextObj: {fileID: 658334510}
   _selectBtnTextShadowObj: {fileID: 1281942193}
   _balanceObj: {fileID: 1307986651}
+  _boats:
+  - {fileID: 983720656}
+  - {fileID: 621002868}
+  - {fileID: 1411597272}
+  - {fileID: 940385674}
 --- !u!1 &1981615403
 GameObject:
   m_ObjectHideFlags: 0

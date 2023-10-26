@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEditor.Build.Reporting;
 
 public class ShopBehaviour : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class ShopBehaviour : MonoBehaviour
 	[SerializeField] private GameObject _selectBtnTextObj;
 	[SerializeField] private GameObject _selectBtnTextShadowObj;
 	[SerializeField] private GameObject _balanceObj;
+
+
+	[SerializeField] private GameObject[] _boats = new GameObject[4];
 
 	private TMP_Text _balanceText;
 	private TMP_Text _selectBtnText;
@@ -167,8 +171,8 @@ public class ShopBehaviour : MonoBehaviour
     {
 		if (curentBoat < maxBoat-1)
 		{
-			StartCoroutine(MoveForwardCorutine());
 			curentBoat++;
+			StartCoroutine(MoveCorutine(_boats[curentBoat].transform.position));
 			SetName(curentBoat);
 			SetSelectButtonText(curentBoat);
 		}
@@ -179,8 +183,8 @@ public class ShopBehaviour : MonoBehaviour
 	{
 		if (curentBoat > 0)
 		{
-			StartCoroutine(MoveBackwardCorutine());
 			curentBoat--;
+			StartCoroutine(MoveCorutine(_boats[curentBoat].transform.position));
 			SetName(curentBoat);
 			SetSelectButtonText(curentBoat);
 		}
@@ -248,26 +252,15 @@ public class ShopBehaviour : MonoBehaviour
 		}
 	}
 
-
-	private IEnumerator MoveForwardCorutine()
+	private IEnumerator MoveCorutine(Vector3 aim)
 	{
+		Vector3 step = (Vector3.zero - aim) / 20f;
 		for (int i = 0; i < 20; i++)
 		{
-			ShopObj.transform.position += new Vector3(-5f, 0, 0) / 20f;
+			ShopObj.transform.position += step;
 			yield return null;
 		}
 	}
-
-
-	private IEnumerator MoveBackwardCorutine()
-	{
-		for (int i = 0; i < 20; i++)
-		{
-			ShopObj.transform.position += new Vector3(5f, 0, 0) / 20f;
-			yield return null;
-		}
-	}
-
 
 	private void SetSelectButtonText(int _curentBoatNum)
 	{
