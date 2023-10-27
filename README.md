@@ -1,5 +1,5 @@
 # BoatRace
-2D unity game about boat races.
+2D unity game about boat races.\
 This project was created by two students as part of advanced training.
 Project was developed for the Android platform using the Unity engine.
 The player can racing with three rival by boat race. Also player can buy much faster boats in shop by earned money.
