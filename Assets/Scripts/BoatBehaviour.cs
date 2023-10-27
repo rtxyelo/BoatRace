@@ -40,6 +40,12 @@ public class BoatBehaviour : MonoBehaviour
 	GameObject[] _normalTagDeactivate;
 	GameObject[] _mediumTagDeactivate;
 	GameObject[] _hardTagDeactivate;
+
+
+	void Awake()
+	{
+		_continueBtn = true;
+	}
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -60,8 +66,6 @@ public class BoatBehaviour : MonoBehaviour
 		{
 			PlayerPrefs.SetInt(_moneyCountKey, 0);
 		}
-
-		_continueBtn = true;
 
 		_currentLevel = PlayerPrefs.GetInt(_currentLevelKey, 0);
 		_boatType = PlayerPrefs.GetInt(_currentBoatKey, 0);
@@ -158,7 +162,7 @@ public class BoatBehaviour : MonoBehaviour
 			{
 				anim.Play(boat.tag);
 				rb.AddForce(new Vector2(0, 20));
-				_TimeDelta = Random.RandomRange(0.2f, 0.4f);
+				_TimeDelta = Random.Range(0.2f, 0.4f);
 			}
 			if (boat.transform.position.y > finishLine.transform.position.y)
 			{
@@ -183,12 +187,6 @@ public class BoatBehaviour : MonoBehaviour
 			{
 				PlayerPrefs.SetInt(_whoFinishedFirstKey, 1);
 				boat.transform.position = startPos;
-
-				// todo 
-				// open finish window
-				// add or not add money
-				// write time at playerprefs
-				// 
 			}
 		}
 		// If win
@@ -263,5 +261,7 @@ public class BoatBehaviour : MonoBehaviour
 			_loseTable.SetActive(true);
 		}
 		PlayerPrefs.SetInt(_whoFinishedFirstKey, -1);
+
+		//Debug.Log("_continueBtn" + _continueBtn);
 	}
 }
